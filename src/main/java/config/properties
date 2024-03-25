@@ -1,0 +1,8 @@
+url = https://magento.softwaretestingboard.com/customer/account/create/
+//for register
+firstName = Areen
+lastName = Rahman
+email = areen@yopmail.com
+password = Naz@1234
+passwordConfirmation = Naz@1234
+browser = chrome
