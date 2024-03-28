@@ -1,10 +1,11 @@
 package base;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class NewAccount extends BasePage {
+
     @FindBy(id = "firstname")
     WebElement firstName;
 
@@ -27,12 +28,14 @@ public class NewAccount extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void createNewAccount(String firstName, String lastName, String email, String password, String passwordConfirmation) {
+    public HomePage createNewAccount(String firstName, String lastName, String email, String password, String passwordConfirmation) {
         this.firstName.sendKeys(firstName);
         this.lastName.sendKeys(lastName);
         this.email.sendKeys(email);
         this.password.sendKeys(password);
         this.passwordConfirmation.sendKeys(passwordConfirmation);
         submitButton.click();
+        return new HomePage();
+
     }
 }

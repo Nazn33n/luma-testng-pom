@@ -1,11 +1,13 @@
 import base.BasePage;
-import base.NewAccount;
 import base.HomePage;
+import base.LandingPage;
+import base.NewAccount;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class NewAccountTest extends BasePage {
+
     NewAccount newAccount;
 
     HomePage homePage;
