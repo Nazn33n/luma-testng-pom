@@ -1,6 +1,5 @@
 import base.BasePage;
-import base.HomePage;
-import base.LandingPage;
+import base.MyAccountPage;
 import base.NewAccount;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -10,7 +9,7 @@ public class NewAccountTest extends BasePage {
 
     NewAccount newAccount;
 
-    HomePage homePage;
+    MyAccountPage myAccountPage;
 
     public NewAccountTest() {
         super();

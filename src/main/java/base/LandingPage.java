@@ -13,9 +13,7 @@ public class LandingPage extends BasePage {
     }
 
     public NewAccount clickNewAccountLink() throws InterruptedException {
-        Thread.sleep(3000);
         clickNewAccountCreateLink.click();
-        Thread.sleep(3000);
         return new NewAccount();
     }
 }

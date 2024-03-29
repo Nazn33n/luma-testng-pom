@@ -1,8 +1,19 @@
 url = https://magento.softwaretestingboard.com
-//for register
-firstName = Areen6
+
+//for adding new account
+firstName = Areen
 lastName = Rahman
-email = areen6@yopmail.com
+email = areen16@yopmail.com
 password = Naz@1234
 passwordConfirmation = Naz@1234
 browser = chrome
+
+//for changing password
+currentPassword = Naz@1234
+newPassword = Ksl@1234
+newPasswordConfirmation = Ksl@1234
+
+//login
+
+loginEmail = areen16@yopmail.com
+loginPassword = Ksl@1234

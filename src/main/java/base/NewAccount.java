@@ -28,14 +28,14 @@ public class NewAccount extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public HomePage createNewAccount(String firstName, String lastName, String email, String password, String passwordConfirmation) {
+    public MyAccountPage createNewAccount(String firstName, String lastName, String email, String password, String passwordConfirmation) {
         this.firstName.sendKeys(firstName);
         this.lastName.sendKeys(lastName);
         this.email.sendKeys(email);
         this.password.sendKeys(password);
         this.passwordConfirmation.sendKeys(passwordConfirmation);
         submitButton.click();
-        return new HomePage();
+        return new MyAccountPage();
 
     }
 }
