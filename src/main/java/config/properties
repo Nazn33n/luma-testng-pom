@@ -17,3 +17,10 @@ newPasswordConfirmation = Ksl@1234
 
 loginEmail = areen16@yopmail.com
 loginPassword = Ksl@1234
+
+//billing information
+ phoneNumber = 01632598564
+ addressOne = 189, Banani
+ addressTwo = Super Market
+ addressThree = Main Road
+ city = Dhaka

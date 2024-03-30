@@ -49,6 +49,7 @@ public class LandingTest extends BasePage {
         loginPage.signIn(
                 email,
                 prop.getProperty("loginPassword"));
+        myAccountPage.clickMenu();
     }
 
     @AfterMethod
