@@ -6,15 +6,13 @@ import org.testng.annotations.Test;
 import java.util.Random;
 
 public class LandingTest extends BasePage {
+
     LandingPage landingPage;
     NewAccount newAccount;
-
     MyAccountPage myAccountPage;
     PasswordDetailPage passwordDetailPage;
     LoginPage loginPage;
-
     AddressBookPage addressBookPage;
-
 
     public LandingTest() {
         super();
@@ -51,16 +49,17 @@ public class LandingTest extends BasePage {
         loginPage.signIn(
                 email,
                 prop.getProperty("loginPassword"));
-        myAccountPage.clickMenu();
+
+        addressBookPage = myAccountPage.clickMenu();
+
         Thread.sleep(3000);
 
-        addressBookPage.initialAddress(prop.getProperty("phoneNumber"),
+        addressBookPage.initialAddress(
+                prop.getProperty("phoneNumber"),
                 prop.getProperty("addressOne"),
                 prop.getProperty("addressTwo"),
                 prop.getProperty("addressThree"),
                 prop.getProperty("city"));
-
-
     }
 
     @AfterMethod
@@ -81,3 +80,10 @@ public class LandingTest extends BasePage {
         return sb.toString();
     }
 }
+
+
+/*
+    AnyPage anyPage;
+    anyPage = new AnyPage();
+    anyPage.anyMethod();
+ */
