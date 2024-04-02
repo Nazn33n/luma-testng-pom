@@ -8,8 +8,9 @@ public class MyAccountPage extends BasePage {
 
     @FindBy(linkText = "Change Password")
     WebElement changePassword;
-     @FindBy(linkText = "Address Book")
-     WebElement addressBook;
+
+    @FindBy(linkText = "Address Book")
+    WebElement addressBook;
 
     public MyAccountPage() {
         PageFactory.initElements(driver, this);
@@ -19,8 +20,9 @@ public class MyAccountPage extends BasePage {
         changePassword.click();
         return new PasswordDetailPage();
     }
-    public void clickMenu()
-    {
+
+    public AddressBookPage clickMenu() {
         addressBook.click();
+        return new AddressBookPage();
     }
 }
