@@ -23,4 +23,5 @@ public class MyAccountPage extends BasePage {
     {
         addressBook.click();
     }
+
 }
