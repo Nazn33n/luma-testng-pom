@@ -4,33 +4,34 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AddressBookPage extends BasePage{
+public class AddressBookPage extends BasePage {
 
-    @FindBy(xpath = "//*[@id=\"telephone\"]")
+    @FindBy(xpath = "//input[@id='telephone']")
     WebElement phoneNumber;
 
-    @FindBy(xpath = "//*[@id=\"street_1\"]")
+    @FindBy(xpath = "//input[@id='street_1']")
     WebElement addressOne;
 
-    @FindBy(xpath = "//*[@id=\"street_2\"]")
+    @FindBy(xpath = "//input[@id='street_2']")
     WebElement addressTwo;
 
-    @FindBy(xpath = "//*[@id=\"street_3\"]")
+    @FindBy(xpath = "//input[@id='street_3']")
     WebElement addressThree;
 
-    @FindBy(xpath = "//*[@id=\"city\"] ")
+    @FindBy(xpath = "//input[@id='city']")
     WebElement city;
 
-    public AddressBookPage()
-    {
-        PageFactory.initElements(driver,this);
+    public AddressBookPage() {
+        PageFactory.initElements(driver, this);
     }
-    public void initialAddress(){
-        phoneNumber.sendKeys(prop.getProperty("phoneNumber"));
-        addressOne.sendKeys(prop.getProperty("addressOne"));
-        addressTwo.sendKeys(prop.getProperty("addressTwo"));
-        addressThree.sendKeys(prop.getProperty("addressThree"));
-        city.sendKeys(prop.getProperty("city"));
+
+    public void initialAddress(String phoneNumber, String addressOne, String addressTwo, String addressThree, String city) {
+
+        this.phoneNumber.sendKeys(phoneNumber);
+        this.addressOne.sendKeys(addressOne);
+        this.addressTwo.sendKeys(addressTwo);
+        this.addressThree.sendKeys(addressThree);
+        this.city.sendKeys(city);
 
     }
 

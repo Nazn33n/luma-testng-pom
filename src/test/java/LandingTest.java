@@ -13,6 +13,8 @@ public class LandingTest extends BasePage {
     PasswordDetailPage passwordDetailPage;
     LoginPage loginPage;
 
+    AddressBookPage addressBookPage;
+
 
     public LandingTest() {
         super();
@@ -50,6 +52,15 @@ public class LandingTest extends BasePage {
                 email,
                 prop.getProperty("loginPassword"));
         myAccountPage.clickMenu();
+        Thread.sleep(3000);
+
+        addressBookPage.initialAddress(prop.getProperty("phoneNumber"),
+                prop.getProperty("addressOne"),
+                prop.getProperty("addressTwo"),
+                prop.getProperty("addressThree"),
+                prop.getProperty("city"));
+
+
     }
 
     @AfterMethod
@@ -63,7 +74,7 @@ public class LandingTest extends BasePage {
         StringBuilder sb = new StringBuilder();
         int i = 0;
         while (i < 5) {
-            sb.append((char)('a' + rand.nextInt(25)));
+            sb.append((char) ('a' + rand.nextInt(25)));
             i++;
         }
         sb.append("@yopmail.com");
