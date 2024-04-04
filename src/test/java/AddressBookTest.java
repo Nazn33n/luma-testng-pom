@@ -18,12 +18,15 @@ public class AddressBookTest extends BasePage {
     }
 
     @Test
-    public void addAddress() {
+    public void addAddress() throws InterruptedException {
         addressBookPage.initialAddress(prop.getProperty("phoneNumber"),
                 prop.getProperty("addressOne"),
                 prop.getProperty("addressTwo"),
                 prop.getProperty("addressThree"),
-                prop.getProperty("city"));
+                prop.getProperty("city"),
+                prop.getProperty("zipCode"));
+        addressBookPage.clickStateDropdown();
+        addressBookPage.clickCityDropdown();
     }
 
     @AfterMethod

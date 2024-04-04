@@ -59,7 +59,13 @@ public class LandingTest extends BasePage {
                 prop.getProperty("addressOne"),
                 prop.getProperty("addressTwo"),
                 prop.getProperty("addressThree"),
-                prop.getProperty("city"));
+                prop.getProperty("city"),
+                prop.getProperty("zipCode"));
+        Thread.sleep(3000);
+        addressBookPage.clickStateDropdown();
+        addressBookPage.clickCityDropdown();
+        Thread.sleep(3000);
+
     }
 
     @AfterMethod
