@@ -50,7 +50,7 @@ public class LandingTest extends BasePage {
                 email,
                 prop.getProperty("loginPassword"));
 
-        addressBookPage = myAccountPage.clickMenu();
+        addressBookPage = myAccountPage.clickEditAddress();
 
         Thread.sleep(3000);
 

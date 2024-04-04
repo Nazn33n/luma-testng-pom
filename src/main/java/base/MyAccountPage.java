@@ -9,8 +9,8 @@ public class MyAccountPage extends BasePage {
     @FindBy(linkText = "Change Password")
     WebElement changePassword;
 
-    @FindBy(linkText = "Address Book")
-    WebElement addressBook;
+    @FindBy(xpath = "/html/body/div[2]/main/div[2]/div[1]/div[5]/div[2]/div[1]/div[2]/a/span")
+    WebElement editAddress;
 
     public MyAccountPage() {
         PageFactory.initElements(driver, this);
@@ -21,8 +21,8 @@ public class MyAccountPage extends BasePage {
         return new PasswordDetailPage();
     }
 
-    public AddressBookPage clickMenu() {
-        addressBook.click();
+    public AddressBookPage clickEditAddress() {
+        editAddress.click();
         return new AddressBookPage();
     }
 
